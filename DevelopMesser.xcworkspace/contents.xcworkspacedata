@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DevelopMesser.podspec">
+   </FileRef>
+   <Group
+      location = "group:DevelopMesser"
+      name = "DevelopMesser">
+      <FileRef
+         location = "group:DMDebug.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMLoadMoreFooterView.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMLoadMoreFooterView.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMPullRefreshTableView.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMPullRefreshTableView.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMRefreshHeaderView.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMRefreshHeaderView.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMSpinnerView.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMSpinnerView.m">
+      </FileRef>
+      <FileRef
+         location = "group:DevelopMesser.h">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Example/Example.xcodeproj">
+   </FileRef>
+</Workspace>
