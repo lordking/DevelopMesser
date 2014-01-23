@@ -14,30 +14,19 @@
 // limitations under the License.
 //
 
-#ifndef _DevelopMesser_h
-    #define _DevelopMesser_h
+#import "DMStyleSheet.h"
 
-    //打印调试
-    #import "DMDebug.h"
+static DMStyleSheet* gStyleSheet = nil;
 
-    //下拉刷新、上拉加载更多的TableView
-    #import "DMLoadMoreFooterView.h"
-    #import "DMPullRefreshTableView.h"
-    #import "DMRefreshHeaderView.h"
+@implementation DMStyleSheet
 
-    //载入图示
-    #import "DMSpinnerView.h"
++ (DMStyleSheet*)globalStyleSheet {
+    return gStyleSheet;
+}
 
-    //可定制左边图片的文本输入框
-    #import "DMTextField.h"
++ (void)setGlobalStyleSheet:(DMStyleSheet*)styleSheet {
+    gStyleSheet = styleSheet;
+}
 
-    //全局样式管理
-    #import "DMGlobalStyle.h"
-    #import "DMStyleSheet.h"
 
-    //可定制的Tab Bar
-    #import "DMTabBar.h"
-    #import "DMTabBarController.h"
-    #import "DMTabBarItem.h"
-
-#endif
+@end

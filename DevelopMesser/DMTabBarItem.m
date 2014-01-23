@@ -14,22 +14,19 @@
 // limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+#import "DMTabBarItem.h"
 
-typedef enum {
-    HeaderViewAnimationWithin = 0,
-    HeaderViewAnimationAbove,
-    HeaderViewAnimationLoading
-} HeaderViewAnimationType;
+@implementation DMTabBarItem
 
-@interface DMRefreshHeaderView : UIView
-
-@property (nonatomic, strong) UILabel *refreshLabel;
-@property (nonatomic, strong) UIImageView *refreshArrow;
-@property (nonatomic, strong) UIActivityIndicatorView *refreshSpinner;
-
-- (void)setText:(NSString*)text;
-- (void)startAnimation:(HeaderViewAnimationType)type;
-- (void)stopAnimation;
+- (id)initWithFinishedSelectedImage:(UIImage *)selectedImage withFinishedUnselectedImage:(UIImage *)unselectedImage{
+    self = [super init];
+    if (self) {
+        _image = unselectedImage;
+        _selectedImage = selectedImage;
+        _unselectedImage = unselectedImage;
+    }
+    
+    return self;
+}
 
 @end

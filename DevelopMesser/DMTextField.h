@@ -14,30 +14,10 @@
 // limitations under the License.
 //
 
-#ifndef _DevelopMesser_h
-    #define _DevelopMesser_h
+#import <UIKit/UIKit.h>
 
-    //打印调试
-    #import "DMDebug.h"
+@interface DMTextField : UITextField
 
-    //下拉刷新、上拉加载更多的TableView
-    #import "DMLoadMoreFooterView.h"
-    #import "DMPullRefreshTableView.h"
-    #import "DMRefreshHeaderView.h"
+-(void)setLeftImage:(NSString *)imageName frame:(CGRect)rect;
 
-    //载入图示
-    #import "DMSpinnerView.h"
-
-    //可定制左边图片的文本输入框
-    #import "DMTextField.h"
-
-    //全局样式管理
-    #import "DMGlobalStyle.h"
-    #import "DMStyleSheet.h"
-
-    //可定制的Tab Bar
-    #import "DMTabBar.h"
-    #import "DMTabBarController.h"
-    #import "DMTabBarItem.h"
-
-#endif
+@end

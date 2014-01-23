@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:DevelopMesser.podspec">
-   </FileRef>
    <Group
       location = "group:DevelopMesser"
       name = "DevelopMesser">
       <FileRef
+         location = "group:DevelopMesser.h">
+      </FileRef>
+      <FileRef
          location = "group:DMDebug.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMGlobalStyle.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMGlobalStyle.m">
       </FileRef>
       <FileRef
          location = "group:DMLoadMoreFooterView.h">
@@ -35,9 +41,45 @@
          location = "group:DMSpinnerView.m">
       </FileRef>
       <FileRef
-         location = "group:DevelopMesser.h">
+         location = "group:DMStyleSheet.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMStyleSheet.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBar.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBar.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBarController.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBarController.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBarItem.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMTabBarItem.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMTextField.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMTextField.m">
+      </FileRef>
+      <FileRef
+         location = "group:DMUserinfo.h">
+      </FileRef>
+      <FileRef
+         location = "group:DMUserinfo.m">
       </FileRef>
    </Group>
+   <FileRef
+      location = "group:DevelopMesser.podspec">
+   </FileRef>
    <FileRef
       location = "group:Example/Example.xcodeproj">
    </FileRef>

@@ -14,30 +14,13 @@
 // limitations under the License.
 //
 
-#ifndef _DevelopMesser_h
-    #define _DevelopMesser_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-    //打印调试
-    #import "DMDebug.h"
 
-    //下拉刷新、上拉加载更多的TableView
-    #import "DMLoadMoreFooterView.h"
-    #import "DMPullRefreshTableView.h"
-    #import "DMRefreshHeaderView.h"
+@interface DMStyleSheet : NSObject
 
-    //载入图示
-    #import "DMSpinnerView.h"
++ (DMStyleSheet*)globalStyleSheet;
++ (void)setGlobalStyleSheet:(DMStyleSheet*)styleSheet;
 
-    //可定制左边图片的文本输入框
-    #import "DMTextField.h"
-
-    //全局样式管理
-    #import "DMGlobalStyle.h"
-    #import "DMStyleSheet.h"
-
-    //可定制的Tab Bar
-    #import "DMTabBar.h"
-    #import "DMTabBarController.h"
-    #import "DMTabBarItem.h"
-
-#endif
+@end

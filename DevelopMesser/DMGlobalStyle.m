@@ -14,22 +14,8 @@
 // limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+#import "DMGlobalStyle.h"
 
-typedef enum {
-    HeaderViewAnimationWithin = 0,
-    HeaderViewAnimationAbove,
-    HeaderViewAnimationLoading
-} HeaderViewAnimationType;
-
-@interface DMRefreshHeaderView : UIView
-
-@property (nonatomic, strong) UILabel *refreshLabel;
-@property (nonatomic, strong) UIImageView *refreshArrow;
-@property (nonatomic, strong) UIActivityIndicatorView *refreshSpinner;
-
-- (void)setText:(NSString*)text;
-- (void)startAnimation:(HeaderViewAnimationType)type;
-- (void)stopAnimation;
+@implementation DMGlobalStyle
 
 @end

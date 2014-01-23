@@ -14,30 +14,22 @@
 // limitations under the License.
 //
 
-#ifndef _DevelopMesser_h
-    #define _DevelopMesser_h
+#import <UIKit/UIKit.h>
 
-    //打印调试
-    #import "DMDebug.h"
+@protocol DMTabBarDelegate <NSObject>
 
-    //下拉刷新、上拉加载更多的TableView
-    #import "DMLoadMoreFooterView.h"
-    #import "DMPullRefreshTableView.h"
-    #import "DMRefreshHeaderView.h"
+@required 
+- (void)buttonClicked:(UIButton*)sender;
 
-    //载入图示
-    #import "DMSpinnerView.h"
+@end
 
-    //可定制左边图片的文本输入框
-    #import "DMTextField.h"
+@interface DMTabBar : UIView
 
-    //全局样式管理
-    #import "DMGlobalStyle.h"
-    #import "DMStyleSheet.h"
+@property(nonatomic, retain) id <DMTabBarDelegate> delegate;
 
-    //可定制的Tab Bar
-    #import "DMTabBar.h"
-    #import "DMTabBarController.h"
-    #import "DMTabBarItem.h"
+@property (nonatomic, strong) NSArray* items;
+@property (nonatomic, strong) UIImage* backgroundImage;
+@property (nonatomic, strong) UIImage* selectionIndicatorImage;
 
-#endif
+@end
+
