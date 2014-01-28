@@ -21,7 +21,7 @@
 
 //打印日志
 #ifdef DEBUG
-#define DMPRINT(xx, ...)  NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DMPRINT(__FORMAT__, ...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define DMPRINT(xx, ...)  ((void)0)
 #endif // #ifdef DEBUG
