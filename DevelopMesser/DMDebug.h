@@ -15,10 +15,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TestFlight.h"
+
+#define NSLog TFLog
 
 //打印日志
 #ifdef DEBUG
-#define DMPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DMPRINT(xx, ...)  NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define DMPRINT(xx, ...)  ((void)0)
 #endif // #ifdef DEBUG

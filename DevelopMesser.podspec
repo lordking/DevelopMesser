@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DevelopMesser"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "IOS常用的开发工具包"
   s.homepage     = "https://github.com/lordking/DevelopMesser"
   s.license      = 'MIT'
