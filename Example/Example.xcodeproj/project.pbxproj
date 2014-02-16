@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E93F415418916E7700B5A4EC /* DMGlobalStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F413B18916E7700B5A4EC /* DMGlobalStyle.m */; };
-		E93F415518916E7700B5A4EC /* DMLoadMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F413D18916E7700B5A4EC /* DMLoadMoreFooterView.m */; };
-		E93F415618916E7700B5A4EC /* DMPullRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F413F18916E7700B5A4EC /* DMPullRefreshTableView.m */; };
-		E93F415718916E7700B5A4EC /* DMRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414118916E7700B5A4EC /* DMRefreshHeaderView.m */; };
-		E93F415818916E7700B5A4EC /* DMSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414318916E7700B5A4EC /* DMSpinnerView.m */; };
-		E93F415918916E7700B5A4EC /* DMStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414518916E7700B5A4EC /* DMStyleSheet.m */; };
-		E93F415A18916E7700B5A4EC /* DMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414718916E7700B5A4EC /* DMTabBar.m */; };
-		E93F415B18916E7700B5A4EC /* DMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414918916E7700B5A4EC /* DMTabBarController.m */; };
-		E93F415C18916E7700B5A4EC /* DMTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414B18916E7700B5A4EC /* DMTabBarItem.m */; };
-		E93F415D18916E7700B5A4EC /* DMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414D18916E7700B5A4EC /* DMTextField.m */; };
-		E93F415E18916E7700B5A4EC /* DMUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F414F18916E7700B5A4EC /* DMUserinfo.m */; };
 		E982F606188FFE9400D0414C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982F605188FFE9400D0414C /* Foundation.framework */; };
 		E982F608188FFE9400D0414C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982F607188FFE9400D0414C /* CoreGraphics.framework */; };
 		E982F60A188FFE9400D0414C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982F609188FFE9400D0414C /* UIKit.framework */; };
@@ -33,9 +22,24 @@
 		E982F62F188FFE9400D0414C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E982F62D188FFE9400D0414C /* InfoPlist.strings */; };
 		E982F631188FFE9400D0414C /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E982F630188FFE9400D0414C /* ExampleTests.m */; };
 		E98CA0D01897FBC0009BCF95 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E98CA0CF1897FBC0009BCF95 /* libz.dylib */; };
-		E98CA0D81897FC95009BCF95 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E98CA0D21897FC95009BCF95 /* libTestFlight.a */; };
-		E98CA0D91897FC95009BCF95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E98CA0D31897FC95009BCF95 /* README.md */; };
-		E98CA0DA1897FC95009BCF95 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E98CA0D41897FC95009BCF95 /* release_notes.md */; };
+		E9D0F62818B06E47007E543B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D0F62218B06E47007E543B /* libTestFlight.a */; };
+		E9D0F62918B06E47007E543B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D0F62218B06E47007E543B /* libTestFlight.a */; };
+		E9D0F62A18B06E47007E543B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F62318B06E47007E543B /* README.md */; };
+		E9D0F62B18B06E47007E543B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F62318B06E47007E543B /* README.md */; };
+		E9D0F62C18B06E47007E543B /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F62418B06E47007E543B /* release_notes.md */; };
+		E9D0F62D18B06E47007E543B /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F62418B06E47007E543B /* release_notes.md */; };
+		E9D40B2818B07CD700C89A59 /* DMGlobalStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1118B07CD700C89A59 /* DMGlobalStyle.m */; };
+		E9D40B2918B07CD700C89A59 /* DMLoadMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1318B07CD700C89A59 /* DMLoadMoreFooterView.m */; };
+		E9D40B2A18B07CD700C89A59 /* DMPullRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1518B07CD700C89A59 /* DMPullRefreshTableView.m */; };
+		E9D40B2B18B07CD700C89A59 /* DMRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1718B07CD700C89A59 /* DMRefreshHeaderView.m */; };
+		E9D40B2C18B07CD700C89A59 /* DMSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1918B07CD700C89A59 /* DMSpinnerView.m */; };
+		E9D40B2D18B07CD700C89A59 /* DMStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1B18B07CD700C89A59 /* DMStyleSheet.m */; };
+		E9D40B2E18B07CD700C89A59 /* DMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1D18B07CD700C89A59 /* DMTabBar.m */; };
+		E9D40B2F18B07CD700C89A59 /* DMTabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B1F18B07CD700C89A59 /* DMTabBarControl.m */; };
+		E9D40B3018B07CD700C89A59 /* DMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2118B07CD700C89A59 /* DMTabBarController.m */; };
+		E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2318B07CD700C89A59 /* DMTabBarItem.m */; };
+		E9D40B3218B07CD700C89A59 /* DMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2518B07CD700C89A59 /* DMTextField.m */; };
+		E9D40B3318B07CD700C89A59 /* DMUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2718B07CD700C89A59 /* DMUserinfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,30 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E93F413818916E7700B5A4EC /* DevelopMesser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevelopMesser.h; sourceTree = "<group>"; };
-		E93F413918916E7700B5A4EC /* DMDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDebug.h; sourceTree = "<group>"; };
-		E93F413A18916E7700B5A4EC /* DMGlobalStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobalStyle.h; sourceTree = "<group>"; };
-		E93F413B18916E7700B5A4EC /* DMGlobalStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMGlobalStyle.m; sourceTree = "<group>"; };
-		E93F413C18916E7700B5A4EC /* DMLoadMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoadMoreFooterView.h; sourceTree = "<group>"; };
-		E93F413D18916E7700B5A4EC /* DMLoadMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoadMoreFooterView.m; sourceTree = "<group>"; };
-		E93F413E18916E7700B5A4EC /* DMPullRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPullRefreshTableView.h; sourceTree = "<group>"; };
-		E93F413F18916E7700B5A4EC /* DMPullRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPullRefreshTableView.m; sourceTree = "<group>"; };
-		E93F414018916E7700B5A4EC /* DMRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRefreshHeaderView.h; sourceTree = "<group>"; };
-		E93F414118916E7700B5A4EC /* DMRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRefreshHeaderView.m; sourceTree = "<group>"; };
-		E93F414218916E7700B5A4EC /* DMSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSpinnerView.h; sourceTree = "<group>"; };
-		E93F414318916E7700B5A4EC /* DMSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSpinnerView.m; sourceTree = "<group>"; };
-		E93F414418916E7700B5A4EC /* DMStyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMStyleSheet.h; sourceTree = "<group>"; };
-		E93F414518916E7700B5A4EC /* DMStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMStyleSheet.m; sourceTree = "<group>"; };
-		E93F414618916E7700B5A4EC /* DMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBar.h; sourceTree = "<group>"; };
-		E93F414718916E7700B5A4EC /* DMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBar.m; sourceTree = "<group>"; };
-		E93F414818916E7700B5A4EC /* DMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBarController.h; sourceTree = "<group>"; };
-		E93F414918916E7700B5A4EC /* DMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarController.m; sourceTree = "<group>"; };
-		E93F414A18916E7700B5A4EC /* DMTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBarItem.h; sourceTree = "<group>"; };
-		E93F414B18916E7700B5A4EC /* DMTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarItem.m; sourceTree = "<group>"; };
-		E93F414C18916E7700B5A4EC /* DMTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTextField.h; sourceTree = "<group>"; };
-		E93F414D18916E7700B5A4EC /* DMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTextField.m; sourceTree = "<group>"; };
-		E93F414E18916E7700B5A4EC /* DMUserinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserinfo.h; sourceTree = "<group>"; };
-		E93F414F18916E7700B5A4EC /* DMUserinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserinfo.m; sourceTree = "<group>"; };
 		E982F602188FFE9400D0414C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E982F605188FFE9400D0414C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E982F607188FFE9400D0414C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,12 +73,38 @@
 		E982F62E188FFE9400D0414C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E982F630188FFE9400D0414C /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		E98CA0CF1897FBC0009BCF95 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		E98CA0D21897FC95009BCF95 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		E98CA0D31897FC95009BCF95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		E98CA0D41897FC95009BCF95 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		E98CA0D51897FC95009BCF95 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		E98CA0D61897FC95009BCF95 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		E98CA0D71897FC95009BCF95 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		E9D0F62218B06E47007E543B /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		E9D0F62318B06E47007E543B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E9D0F62418B06E47007E543B /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		E9D0F62518B06E47007E543B /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		E9D0F62618B06E47007E543B /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		E9D0F62718B06E47007E543B /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		E9D40B0E18B07CD700C89A59 /* DevelopMesser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevelopMesser.h; sourceTree = "<group>"; };
+		E9D40B0F18B07CD700C89A59 /* DMDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDebug.h; sourceTree = "<group>"; };
+		E9D40B1018B07CD700C89A59 /* DMGlobalStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobalStyle.h; sourceTree = "<group>"; };
+		E9D40B1118B07CD700C89A59 /* DMGlobalStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMGlobalStyle.m; sourceTree = "<group>"; };
+		E9D40B1218B07CD700C89A59 /* DMLoadMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoadMoreFooterView.h; sourceTree = "<group>"; };
+		E9D40B1318B07CD700C89A59 /* DMLoadMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoadMoreFooterView.m; sourceTree = "<group>"; };
+		E9D40B1418B07CD700C89A59 /* DMPullRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPullRefreshTableView.h; sourceTree = "<group>"; };
+		E9D40B1518B07CD700C89A59 /* DMPullRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPullRefreshTableView.m; sourceTree = "<group>"; };
+		E9D40B1618B07CD700C89A59 /* DMRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRefreshHeaderView.h; sourceTree = "<group>"; };
+		E9D40B1718B07CD700C89A59 /* DMRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRefreshHeaderView.m; sourceTree = "<group>"; };
+		E9D40B1818B07CD700C89A59 /* DMSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSpinnerView.h; sourceTree = "<group>"; };
+		E9D40B1918B07CD700C89A59 /* DMSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSpinnerView.m; sourceTree = "<group>"; };
+		E9D40B1A18B07CD700C89A59 /* DMStyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMStyleSheet.h; sourceTree = "<group>"; };
+		E9D40B1B18B07CD700C89A59 /* DMStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMStyleSheet.m; sourceTree = "<group>"; };
+		E9D40B1C18B07CD700C89A59 /* DMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBar.h; sourceTree = "<group>"; };
+		E9D40B1D18B07CD700C89A59 /* DMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBar.m; sourceTree = "<group>"; };
+		E9D40B1E18B07CD700C89A59 /* DMTabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBarControl.h; sourceTree = "<group>"; };
+		E9D40B1F18B07CD700C89A59 /* DMTabBarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarControl.m; sourceTree = "<group>"; };
+		E9D40B2018B07CD700C89A59 /* DMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBarController.h; sourceTree = "<group>"; };
+		E9D40B2118B07CD700C89A59 /* DMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarController.m; sourceTree = "<group>"; };
+		E9D40B2218B07CD700C89A59 /* DMTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTabBarItem.h; sourceTree = "<group>"; };
+		E9D40B2318B07CD700C89A59 /* DMTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarItem.m; sourceTree = "<group>"; };
+		E9D40B2418B07CD700C89A59 /* DMTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTextField.h; sourceTree = "<group>"; };
+		E9D40B2518B07CD700C89A59 /* DMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTextField.m; sourceTree = "<group>"; };
+		E9D40B2618B07CD700C89A59 /* DMUserinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserinfo.h; sourceTree = "<group>"; };
+		E9D40B2718B07CD700C89A59 /* DMUserinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserinfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98CA0D81897FC95009BCF95 /* libTestFlight.a in Frameworks */,
+				E9D0F62818B06E47007E543B /* libTestFlight.a in Frameworks */,
 				E98CA0D01897FBC0009BCF95 /* libz.dylib in Frameworks */,
 				E982F608188FFE9400D0414C /* CoreGraphics.framework in Frameworks */,
 				E982F60A188FFE9400D0414C /* UIKit.framework in Frameworks */,
@@ -121,76 +127,13 @@
 				E982F625188FFE9400D0414C /* XCTest.framework in Frameworks */,
 				E982F627188FFE9400D0414C /* UIKit.framework in Frameworks */,
 				E982F626188FFE9400D0414C /* Foundation.framework in Frameworks */,
+				E9D0F62918B06E47007E543B /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E93F413718916E7700B5A4EC /* DevelopMesser */ = {
-			isa = PBXGroup;
-			children = (
-				E93F413818916E7700B5A4EC /* DevelopMesser.h */,
-				E93F413918916E7700B5A4EC /* DMDebug.h */,
-				E93F413A18916E7700B5A4EC /* DMGlobalStyle.h */,
-				E93F413B18916E7700B5A4EC /* DMGlobalStyle.m */,
-				E93F413C18916E7700B5A4EC /* DMLoadMoreFooterView.h */,
-				E93F413D18916E7700B5A4EC /* DMLoadMoreFooterView.m */,
-				E93F413E18916E7700B5A4EC /* DMPullRefreshTableView.h */,
-				E93F413F18916E7700B5A4EC /* DMPullRefreshTableView.m */,
-				E93F414018916E7700B5A4EC /* DMRefreshHeaderView.h */,
-				E93F414118916E7700B5A4EC /* DMRefreshHeaderView.m */,
-				E93F414218916E7700B5A4EC /* DMSpinnerView.h */,
-				E93F414318916E7700B5A4EC /* DMSpinnerView.m */,
-				E93F414418916E7700B5A4EC /* DMStyleSheet.h */,
-				E93F414518916E7700B5A4EC /* DMStyleSheet.m */,
-				E93F414618916E7700B5A4EC /* DMTabBar.h */,
-				E93F414718916E7700B5A4EC /* DMTabBar.m */,
-				E93F414818916E7700B5A4EC /* DMTabBarController.h */,
-				E93F414918916E7700B5A4EC /* DMTabBarController.m */,
-				E93F414A18916E7700B5A4EC /* DMTabBarItem.h */,
-				E93F414B18916E7700B5A4EC /* DMTabBarItem.m */,
-				E93F414C18916E7700B5A4EC /* DMTextField.h */,
-				E93F414D18916E7700B5A4EC /* DMTextField.m */,
-				E93F414E18916E7700B5A4EC /* DMUserinfo.h */,
-				E93F414F18916E7700B5A4EC /* DMUserinfo.m */,
-				E93F415018916E7700B5A4EC /* Views */,
-			);
-			name = DevelopMesser;
-			path = ../../DevelopMesser;
-			sourceTree = "<group>";
-		};
-		E93F415018916E7700B5A4EC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E93F415118916E7700B5A4EC /* PullRefreshTableView */,
-				E93F415218916E7700B5A4EC /* StyleSheet */,
-				E93F415318916E7700B5A4EC /* TabBarController */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E93F415118916E7700B5A4EC /* PullRefreshTableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PullRefreshTableView;
-			sourceTree = "<group>";
-		};
-		E93F415218916E7700B5A4EC /* StyleSheet */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StyleSheet;
-			sourceTree = "<group>";
-		};
-		E93F415318916E7700B5A4EC /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBarController;
-			sourceTree = "<group>";
-		};
 		E982F5F9188FFE9400D0414C = {
 			isa = PBXGroup;
 			children = (
@@ -269,24 +212,58 @@
 		E982F6491890120200D0414C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				E98CA0D11897FC95009BCF95 /* TestFlightSDK */,
-				E93F413718916E7700B5A4EC /* DevelopMesser */,
+				E9D40B0D18B07CD700C89A59 /* DevelopMesser */,
+				E9D0F62118B06E47007E543B /* TestFlightSDK */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
 		};
-		E98CA0D11897FC95009BCF95 /* TestFlightSDK */ = {
+		E9D0F62118B06E47007E543B /* TestFlightSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E98CA0D21897FC95009BCF95 /* libTestFlight.a */,
-				E98CA0D31897FC95009BCF95 /* README.md */,
-				E98CA0D41897FC95009BCF95 /* release_notes.md */,
-				E98CA0D51897FC95009BCF95 /* TestFlight+AsyncLogging.h */,
-				E98CA0D61897FC95009BCF95 /* TestFlight+ManualSessions.h */,
-				E98CA0D71897FC95009BCF95 /* TestFlight.h */,
+				E9D0F62218B06E47007E543B /* libTestFlight.a */,
+				E9D0F62318B06E47007E543B /* README.md */,
+				E9D0F62418B06E47007E543B /* release_notes.md */,
+				E9D0F62518B06E47007E543B /* TestFlight+AsyncLogging.h */,
+				E9D0F62618B06E47007E543B /* TestFlight+ManualSessions.h */,
+				E9D0F62718B06E47007E543B /* TestFlight.h */,
 			);
 			name = TestFlightSDK;
 			path = ../../TestFlightSDK;
+			sourceTree = "<group>";
+		};
+		E9D40B0D18B07CD700C89A59 /* DevelopMesser */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B0E18B07CD700C89A59 /* DevelopMesser.h */,
+				E9D40B0F18B07CD700C89A59 /* DMDebug.h */,
+				E9D40B1018B07CD700C89A59 /* DMGlobalStyle.h */,
+				E9D40B1118B07CD700C89A59 /* DMGlobalStyle.m */,
+				E9D40B1218B07CD700C89A59 /* DMLoadMoreFooterView.h */,
+				E9D40B1318B07CD700C89A59 /* DMLoadMoreFooterView.m */,
+				E9D40B1418B07CD700C89A59 /* DMPullRefreshTableView.h */,
+				E9D40B1518B07CD700C89A59 /* DMPullRefreshTableView.m */,
+				E9D40B1618B07CD700C89A59 /* DMRefreshHeaderView.h */,
+				E9D40B1718B07CD700C89A59 /* DMRefreshHeaderView.m */,
+				E9D40B1818B07CD700C89A59 /* DMSpinnerView.h */,
+				E9D40B1918B07CD700C89A59 /* DMSpinnerView.m */,
+				E9D40B1A18B07CD700C89A59 /* DMStyleSheet.h */,
+				E9D40B1B18B07CD700C89A59 /* DMStyleSheet.m */,
+				E9D40B1C18B07CD700C89A59 /* DMTabBar.h */,
+				E9D40B1D18B07CD700C89A59 /* DMTabBar.m */,
+				E9D40B1E18B07CD700C89A59 /* DMTabBarControl.h */,
+				E9D40B1F18B07CD700C89A59 /* DMTabBarControl.m */,
+				E9D40B2018B07CD700C89A59 /* DMTabBarController.h */,
+				E9D40B2118B07CD700C89A59 /* DMTabBarController.m */,
+				E9D40B2218B07CD700C89A59 /* DMTabBarItem.h */,
+				E9D40B2318B07CD700C89A59 /* DMTabBarItem.m */,
+				E9D40B2418B07CD700C89A59 /* DMTextField.h */,
+				E9D40B2518B07CD700C89A59 /* DMTextField.m */,
+				E9D40B2618B07CD700C89A59 /* DMUserinfo.h */,
+				E9D40B2718B07CD700C89A59 /* DMUserinfo.m */,
+			);
+			name = DevelopMesser;
+			path = ../../DevelopMesser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,10 +343,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E982F61E188FFE9400D0414C /* Images.xcassets in Resources */,
+				E9D0F62C18B06E47007E543B /* release_notes.md in Resources */,
+				E9D0F62A18B06E47007E543B /* README.md in Resources */,
 				E982F610188FFE9400D0414C /* InfoPlist.strings in Resources */,
-				E98CA0D91897FC95009BCF95 /* README.md in Resources */,
 				E982F619188FFE9400D0414C /* Main.storyboard in Resources */,
-				E98CA0DA1897FC95009BCF95 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D0F62D18B06E47007E543B /* release_notes.md in Resources */,
+				E9D0F62B18B06E47007E543B /* README.md in Resources */,
 				E982F62F188FFE9400D0414C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,19 +368,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E982F61C188FFE9400D0414C /* ViewController.m in Sources */,
-				E93F415D18916E7700B5A4EC /* DMTextField.m in Sources */,
-				E93F415C18916E7700B5A4EC /* DMTabBarItem.m in Sources */,
-				E93F415718916E7700B5A4EC /* DMRefreshHeaderView.m in Sources */,
-				E93F415618916E7700B5A4EC /* DMPullRefreshTableView.m in Sources */,
-				E93F415418916E7700B5A4EC /* DMGlobalStyle.m in Sources */,
+				E9D40B2B18B07CD700C89A59 /* DMRefreshHeaderView.m in Sources */,
+				E9D40B3318B07CD700C89A59 /* DMUserinfo.m in Sources */,
+				E9D40B3218B07CD700C89A59 /* DMTextField.m in Sources */,
+				E9D40B2A18B07CD700C89A59 /* DMPullRefreshTableView.m in Sources */,
+				E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */,
+				E9D40B2F18B07CD700C89A59 /* DMTabBarControl.m in Sources */,
+				E9D40B2818B07CD700C89A59 /* DMGlobalStyle.m in Sources */,
 				E982F616188FFE9400D0414C /* AppDelegate.m in Sources */,
-				E93F415E18916E7700B5A4EC /* DMUserinfo.m in Sources */,
-				E93F415818916E7700B5A4EC /* DMSpinnerView.m in Sources */,
-				E93F415A18916E7700B5A4EC /* DMTabBar.m in Sources */,
-				E93F415918916E7700B5A4EC /* DMStyleSheet.m in Sources */,
-				E93F415B18916E7700B5A4EC /* DMTabBarController.m in Sources */,
+				E9D40B2C18B07CD700C89A59 /* DMSpinnerView.m in Sources */,
+				E9D40B2E18B07CD700C89A59 /* DMTabBar.m in Sources */,
+				E9D40B3018B07CD700C89A59 /* DMTabBarController.m in Sources */,
+				E9D40B2D18B07CD700C89A59 /* DMStyleSheet.m in Sources */,
 				E982F612188FFE9400D0414C /* main.m in Sources */,
-				E93F415518916E7700B5A4EC /* DMLoadMoreFooterView.m in Sources */,
+				E9D40B2918B07CD700C89A59 /* DMLoadMoreFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +554,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jinlei/Documents/Workspace/DevelopMesser/TestFlightSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -593,6 +577,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jinlei/Documents/Workspace/DevelopMesser/TestFlightSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

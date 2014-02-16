@@ -95,33 +95,17 @@
          <FileRef
             location = "group:DevelopMesser/DMTextField.m">
          </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMTabBarControl.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMTabBarControl.m">
+         </FileRef>
       </Group>
    </Group>
    <FileRef
       location = "group:DevelopMesser.podspec">
    </FileRef>
-   <Group
-      location = "group:TestFlightSDK"
-      name = "TestFlightSDK">
-      <FileRef
-         location = "group:libTestFlight.a">
-      </FileRef>
-      <FileRef
-         location = "group:README.md">
-      </FileRef>
-      <FileRef
-         location = "group:release_notes.md">
-      </FileRef>
-      <FileRef
-         location = "group:TestFlight+AsyncLogging.h">
-      </FileRef>
-      <FileRef
-         location = "group:TestFlight+ManualSessions.h">
-      </FileRef>
-      <FileRef
-         location = "group:TestFlight.h">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:Example/Example.xcodeproj">
    </FileRef>

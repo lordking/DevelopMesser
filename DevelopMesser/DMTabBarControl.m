@@ -18,22 +18,45 @@
 
 @implementation DMTabBarControl
 
-- (id)initWithFrame:(CGRect)frame
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
+        self.selectedButtonIndex = 0;
     }
+    
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)layoutSubviews
 {
-    // Drawing code
+    [super layoutSubviews];
+    [self layoutIfNeeded];
+    
+    for (UIButton *button in _buttons) {
+        [button addTarget:self action:@selector(didValueChanged:) forControlEvents:UIControlEventTouchDown];
+    }
 }
-*/
+
+#pragma mark - private method
+
+- (void)didValueChanged:(id)sender
+{
+    
+    self.selectedButtonIndex = [_buttons indexOfObject:sender];
+    
+    for (UIButton *button in _buttons) {
+        if ([button isEqual:sender]) {
+            button.selected = YES;
+        } else {
+            button.selected = NO;
+        }
+    }
+    
+    //通知事件动作，即:IBAction
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
 
 @end

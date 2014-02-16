@@ -18,6 +18,7 @@
 
 @interface DMTabBarControl : UIControl
 
-//@property (nonatomic, strong)
+@property (nonatomic, strong) NSArray *buttons;
+@property (nonatomic) NSInteger selectedButtonIndex;
 
 @end
