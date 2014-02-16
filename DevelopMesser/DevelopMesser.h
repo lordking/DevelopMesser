@@ -40,6 +40,8 @@
     #import "DMTabBarController.h"
     #import "DMTabBarItem.h"
 
+    #import "DMTabBarControl.h"
+
     //用户信息存取
     #import "DMUserinfo.h"
 
