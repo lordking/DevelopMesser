@@ -7,75 +7,95 @@
       <FileRef
          location = "group:DevelopMesser.h">
       </FileRef>
-      <FileRef
-         location = "group:DMDebug.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMGlobalStyle.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMGlobalStyle.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMLoadMoreFooterView.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMLoadMoreFooterView.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMPullRefreshTableView.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMPullRefreshTableView.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMRefreshHeaderView.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMRefreshHeaderView.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMSpinnerView.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMSpinnerView.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMStyleSheet.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMStyleSheet.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBar.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBar.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBarController.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBarController.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBarItem.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMTabBarItem.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMTextField.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMTextField.m">
-      </FileRef>
-      <FileRef
-         location = "group:DMUserinfo.h">
-      </FileRef>
-      <FileRef
-         location = "group:DMUserinfo.m">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "Core">
+         <FileRef
+            location = "group:DevelopMesser/DMDebug.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMUserinfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMUserinfo.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "UI">
+         <Group
+            location = "container:"
+            name = "PullRefreshTableView">
+            <FileRef
+               location = "group:DevelopMesser/DMLoadMoreFooterView.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMLoadMoreFooterView.m">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMPullRefreshTableView.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMPullRefreshTableView.m">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMRefreshHeaderView.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMRefreshHeaderView.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "TabBarController">
+            <FileRef
+               location = "group:DevelopMesser/DMTabBar.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMTabBar.m">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMTabBarController.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMTabBarController.m">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMTabBarItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMTabBarItem.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "StyleSheet">
+            <FileRef
+               location = "group:DevelopMesser/DMGlobalStyle.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMGlobalStyle.m">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMStyleSheet.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/DMStyleSheet.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:DevelopMesser/DMSpinnerView.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMSpinnerView.m">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMTextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/DMTextField.m">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "group:DevelopMesser.podspec">
