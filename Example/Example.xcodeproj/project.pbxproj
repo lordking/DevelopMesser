@@ -40,6 +40,9 @@
 		E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2318B07CD700C89A59 /* DMTabBarItem.m */; };
 		E9D40B3218B07CD700C89A59 /* DMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2518B07CD700C89A59 /* DMTextField.m */; };
 		E9D40B3318B07CD700C89A59 /* DMUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B2718B07CD700C89A59 /* DMUserinfo.m */; };
+		E9D40B3618B07E5B00C89A59 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D40B3518B07E5B00C89A59 /* list.json */; };
+		E9D40B3918B09A0E00C89A59 /* DebugDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */; };
+		E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,11 @@
 		E9D40B2518B07CD700C89A59 /* DMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTextField.m; sourceTree = "<group>"; };
 		E9D40B2618B07CD700C89A59 /* DMUserinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserinfo.h; sourceTree = "<group>"; };
 		E9D40B2718B07CD700C89A59 /* DMUserinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserinfo.m; sourceTree = "<group>"; };
+		E9D40B3518B07E5B00C89A59 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		E9D40B3718B09A0E00C89A59 /* DebugDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugDemoViewController.h; path = Example/DebugDemoViewController.h; sourceTree = "<group>"; };
+		E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugDemoViewController.m; path = Example/DebugDemoViewController.m; sourceTree = "<group>"; };
+		E9D40B3E18B1A8EE00C89A59 /* TabBarControlDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarControlDemoViewController.h; path = Example/TabBarControlDemoViewController.h; sourceTree = "<group>"; };
+		E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarControlDemoViewController.m; path = Example/TabBarControlDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,9 @@
 		E982F60B188FFE9400D0414C /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				E9D40B4218B1B0C000C89A59 /* Core */,
+				E9D40B4318B1B0C600C89A59 /* UI */,
+				E9D40B3418B07E2B00C89A59 /* Assets */,
 				E982F6491890120200D0414C /* Vendor */,
 				E982F614188FFE9400D0414C /* AppDelegate.h */,
 				E982F615188FFE9400D0414C /* AppDelegate.m */,
@@ -266,6 +277,50 @@
 			path = ../../DevelopMesser;
 			sourceTree = "<group>";
 		};
+		E9D40B3418B07E2B00C89A59 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B3518B07E5B00C89A59 /* list.json */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E9D40B3A18B1A0B300C89A59 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B3718B09A0E00C89A59 /* DebugDemoViewController.h */,
+				E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */,
+			);
+			name = Debug;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E9D40B4118B1B0AF00C89A59 /* TabBarControl */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B3E18B1A8EE00C89A59 /* TabBarControlDemoViewController.h */,
+				E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */,
+			);
+			name = TabBarControl;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E9D40B4218B1B0C000C89A59 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B3A18B1A0B300C89A59 /* Debug */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E9D40B4318B1B0C600C89A59 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9D40B4118B1B0AF00C89A59 /* TabBarControl */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +402,7 @@
 				E9D0F62A18B06E47007E543B /* README.md in Resources */,
 				E982F610188FFE9400D0414C /* InfoPlist.strings in Resources */,
 				E982F619188FFE9400D0414C /* Main.storyboard in Resources */,
+				E9D40B3618B07E5B00C89A59 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +431,7 @@
 				E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */,
 				E9D40B2F18B07CD700C89A59 /* DMTabBarControl.m in Sources */,
 				E9D40B2818B07CD700C89A59 /* DMGlobalStyle.m in Sources */,
+				E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */,
 				E982F616188FFE9400D0414C /* AppDelegate.m in Sources */,
 				E9D40B2C18B07CD700C89A59 /* DMSpinnerView.m in Sources */,
 				E9D40B2E18B07CD700C89A59 /* DMTabBar.m in Sources */,
@@ -382,6 +439,7 @@
 				E9D40B2D18B07CD700C89A59 /* DMStyleSheet.m in Sources */,
 				E982F612188FFE9400D0414C /* main.m in Sources */,
 				E9D40B2918B07CD700C89A59 /* DMLoadMoreFooterView.m in Sources */,
+				E9D40B3918B09A0E00C89A59 /* DebugDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

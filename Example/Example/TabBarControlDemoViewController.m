@@ -8,31 +8,52 @@
 
 #import "TabBarControlDemoViewController.h"
 
+#import "DMDebug.h"
+#import "DMTabBarControl.h"
+
 @interface TabBarControlDemoViewController ()
+
+@property (nonatomic, weak) IBOutlet DMTabBarControl *tabBar;
+@property (nonatomic, weak) IBOutlet UIButton *button1;
+@property (nonatomic, weak) IBOutlet UIButton *button2;
+@property (nonatomic, weak) IBOutlet UIButton *button3;
 
 @end
 
 @implementation TabBarControlDemoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    DMPRINTMETHODNAME();
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
+        
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
+    DMPRINTMETHODNAME();
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    _tabBar.buttons = @[_button1, _button2, _button3];
 }
 
 - (void)didReceiveMemoryWarning
 {
+    DMPRINTMETHODNAME();
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBAction
+
+-(IBAction)switchButton:(id)sender
+{
+    DMPRINTMETHODNAME();
+    DMPRINT(@"select: %ld", self.tabBar.selectedButtonIndex);
+    
 }
 
 @end

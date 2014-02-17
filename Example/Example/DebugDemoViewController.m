@@ -8,6 +8,8 @@
 
 #import "DebugDemoViewController.h"
 
+#import "DMDebug.h"
+
 @interface DebugDemoViewController ()
 
 @end
@@ -27,12 +29,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self debugPrint];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - private
+- (void)debugPrint
+{
+    DMPRINTMETHODNAME();
+    
+    DMPRINT(@"%@ This is a test!", @"Hi!");
 }
 
 @end

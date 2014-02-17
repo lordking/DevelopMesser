@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
+{
+    NSArray *_list;
+}
+- (NSArray *)list
+{
+    return _list;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [TestFlight takeOff:@"950f25df-81e1-4090-be53-6616da4526f1"];
+    [self loadList];
     
     return YES;
 }
@@ -42,6 +51,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark private
+
+- (void)loadList
+{
+    NSString* path = [[NSBundle mainBundle] pathForResource: @"list"
+                                                     ofType: @"json"];
+    NSString* data = [NSString stringWithContentsOfFile: path
+                                               encoding: NSUTF8StringEncoding
+                                                  error: nil];
+    
+    NSData* resultData = [data dataUsingEncoding:NSUTF8StringEncoding];
+    _list = [NSJSONSerialization JSONObjectWithData:resultData
+                                                  options:kNilOptions
+                                                    error:nil];
+    
 }
 
 @end
