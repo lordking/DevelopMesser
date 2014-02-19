@@ -12,4 +12,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/lordking/DevelopMesser.git", :tag => "0.0.1"}
   s.public_header_files = 'DevelopMesser/*.h'
   s.source_files  = 'DevelopMesser/*.{h,m}'
+  
+  s.ios.dependency 'TestFlightSDK', '2.1.4'
 end
