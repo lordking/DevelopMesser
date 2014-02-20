@@ -7,6 +7,7 @@
 //
 
 #import "BLECentralDriven.h"
+#import "DMDebug.h"
 
 static eventConnectBlock privateConnectBlock;
 static eventActionBlock privateActionBlock;
@@ -28,7 +29,7 @@ static eventActionBlock privateActionBlock;
  */
 + (BLECentralDriven *)shared
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     static BLECentralDriven *class;
     static dispatch_once_t onceToken;
@@ -48,7 +49,7 @@ static eventActionBlock privateActionBlock;
  */
 - (id)init
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     self = [super init];
     if (self) {
@@ -69,7 +70,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)startScanWithServices:(NSArray *)servicesCBUUID
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     /* options参数说明
      CBCentralManagerScanOptionAllowDuplicatesKey
@@ -95,7 +96,7 @@ static eventActionBlock privateActionBlock;
     NSArray *retrieveConnectedPeripherals = [manager retrieveConnectedPeripheralsWithServices:servicesCBUUID];
     
     for (CBPeripheral *peripheral in retrieveConnectedPeripherals) {
-        EUDPRINT(@"retrieve peripheral: %@",peripheral);
+        DMPRINT(@"retrieve peripheral: %@",peripheral);
         
         if(![self.dicoveredPeripherals containsObject:peripheral])
             [self.dicoveredPeripherals addObject:peripheral];
@@ -113,7 +114,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)stopScan
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     [manager stopScan];
 }
@@ -136,7 +137,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)connectPeripheralWithUUID:(NSUUID*)uuid
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     CBPeripheral *currentPeripheral = nil;
 
@@ -150,7 +151,7 @@ static eventActionBlock privateActionBlock;
     if (currentPeripheral == nil) {
         
         NSString *errorMsg = [NSString stringWithFormat:@"设备不存在:%@",uuid];
-        EUDPRINT("%@",errorMsg);
+        DMPRINT("%@",errorMsg);
         
         if (privateConnectBlock) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:errorMsg                                                                      forKey:NSLocalizedDescriptionKey];
@@ -179,7 +180,7 @@ static eventActionBlock privateActionBlock;
 
 - (void)disconnectPeripheralWithUUID:(NSUUID*)uuid
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     CBPeripheral *currentPeripheral = nil;
     
@@ -203,7 +204,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)writeData:(NSData*)data forCharacteristic:(CBUUID*)characteristicUUID service: (CBUUID*)serviceUUID peripheral: (NSUUID*)peripheralUUID
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     _serviceUUID = serviceUUID;
     _characteristicUUID = characteristicUUID;
@@ -226,7 +227,7 @@ static eventActionBlock privateActionBlock;
  */
 - (BOOL)supportLEHardware
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     NSString * state = nil;
     
@@ -248,7 +249,7 @@ static eventActionBlock privateActionBlock;
             return false;
     }
     
-    EUDPRINT(@"蓝牙设备状态: %@", state);
+    DMPRINT(@"蓝牙设备状态: %@", state);
     
     return false;
 }
@@ -268,7 +269,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     if (![self supportLEHardware]) //激活中心设备时检查中心设备是否支持BLE
     {
@@ -288,10 +289,10 @@ static eventActionBlock privateActionBlock;
  */
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     //打印被发现的外围设备数据
-    EUDPRINT(@"发现一个外围设备。 设备属性: %@ rssi: %@, UUID: %@ advertisementData: %@ ", peripheral, RSSI, peripheral.identifier, advertisementData);
+    DMPRINT(@"发现一个外围设备。 设备属性: %@ rssi: %@, UUID: %@ advertisementData: %@ ", peripheral, RSSI, peripheral.identifier, advertisementData);
     
     //加入到被发现的设备列表中
     if(![self.dicoveredPeripherals containsObject:peripheral])
@@ -309,9 +310,9 @@ static eventActionBlock privateActionBlock;
  */
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
-    EUDPRINT(@"已经连接到外围设备: %@", peripheral);
+    DMPRINT(@"已经连接到外围设备: %@", peripheral);
     
     //回调程序块，返回当前外围设备及其连接状态
     if (privateConnectBlock) {
@@ -324,7 +325,7 @@ static eventActionBlock privateActionBlock;
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
 
     if (privateConnectBlock) {
         privateConnectBlock(peripheral, BLUETOOTH_STATUS_DISCONNECTED, error);
@@ -336,7 +337,7 @@ static eventActionBlock privateActionBlock;
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     if (privateConnectBlock) {
         privateConnectBlock(peripheral, BLUETOOTH_STATUS_FAIL_TO_CONNECT, error);
@@ -360,12 +361,12 @@ static eventActionBlock privateActionBlock;
  */
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     //如果存在错误，返回错误原因
     if (error)
     {
-        EUDPRINT(@"外围设备 %@ 错误: %@", peripheral.name, [error localizedDescription]);
+        DMPRINT(@"外围设备 %@ 错误: %@", peripheral.name, [error localizedDescription]);
         return;
     }
     
@@ -380,10 +381,10 @@ static eventActionBlock privateActionBlock;
         }
     }
     if (currentService == nil) {
-        EUDPRINT(@"不存在服务:%@", _serviceUUID);
+        DMPRINT(@"不存在服务:%@", _serviceUUID);
         return;
     }
-    EUDPRINT(@"找到外围设备的服务:%@", _serviceUUID);
+    DMPRINT(@"找到外围设备的服务:%@", _serviceUUID);
     
     [peripheral discoverCharacteristics:nil forService:currentService];
 }
@@ -397,12 +398,12 @@ static eventActionBlock privateActionBlock;
  */
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     //如果存在错误，返回错误原因
     if (error)
     {
-        EUDPRINT(@"服务 %@ 错误: %@", service.UUID, [error localizedDescription]);
+        DMPRINT(@"服务 %@ 错误: %@", service.UUID, [error localizedDescription]);
         return;
     }
     
@@ -417,11 +418,11 @@ static eventActionBlock privateActionBlock;
         }
     }
     if (currentCharacteristic == nil) {
-        EUDPRINT(@"不存在服务特性:%@", _characteristicUUID);
+        DMPRINT(@"不存在服务特性:%@", _characteristicUUID);
         return;
     }
     
-    EUDPRINT(@"找到外围设备的服务特性:%@", _characteristicUUID);
+    DMPRINT(@"找到外围设备的服务特性:%@", _characteristicUUID);
     if (_actionType == BLUETOOTH_ACTION_WRITE) {
         [peripheral writeValue:_data forCharacteristic:currentCharacteristic type:CBCharacteristicWriteWithResponse];
     }
@@ -436,7 +437,7 @@ static eventActionBlock privateActionBlock;
  */
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
-    EUDPRINTMETHODNAME();
+    DMPRINTMETHODNAME();
     
     if (privateActionBlock) {
         privateActionBlock(peripheral, characteristic, error);
@@ -444,10 +445,10 @@ static eventActionBlock privateActionBlock;
     
     if (error)
     {
-        EUDPRINT(@"写入服务特性 %@ 错误: %@", characteristic.UUID, [error localizedDescription]);
+        DMPRINT(@"写入服务特性 %@ 错误: %@", characteristic.UUID, [error localizedDescription]);
         return;
     }
-    EUDPRINT(@"写入服务特性:%@ 成功", _characteristicUUID);
+    DMPRINT(@"写入服务特性:%@ 成功", _characteristicUUID);
 }
 
 @end

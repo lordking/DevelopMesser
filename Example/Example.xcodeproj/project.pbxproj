@@ -43,6 +43,7 @@
 		E9D40B3618B07E5B00C89A59 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D40B3518B07E5B00C89A59 /* list.json */; };
 		E9D40B3918B09A0E00C89A59 /* DebugDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */; };
 		E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */; };
+		E9E6000C18B5E1AB002C59CB /* BLECentralDriven.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugDemoViewController.m; path = Example/DebugDemoViewController.m; sourceTree = "<group>"; };
 		E9D40B3E18B1A8EE00C89A59 /* TabBarControlDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarControlDemoViewController.h; path = Example/TabBarControlDemoViewController.h; sourceTree = "<group>"; };
 		E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarControlDemoViewController.m; path = Example/TabBarControlDemoViewController.m; sourceTree = "<group>"; };
+		E9E6000A18B5E1AB002C59CB /* BLECentralDriven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLECentralDriven.h; path = ../../DevelopMesser/BLECentralDriven.h; sourceTree = "<group>"; };
+		E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLECentralDriven.m; path = ../../DevelopMesser/BLECentralDriven.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,7 @@
 		E9D40B4218B1B0C000C89A59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E9E6000D18B5E1BB002C59CB /* BLEDriven */,
 				E9D40B3A18B1A0B300C89A59 /* Debug */,
 			);
 			name = Core;
@@ -319,6 +323,15 @@
 				E9D40B4118B1B0AF00C89A59 /* TabBarControl */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		E9E6000D18B5E1BB002C59CB /* BLEDriven */ = {
+			isa = PBXGroup;
+			children = (
+				E9E6000A18B5E1AB002C59CB /* BLECentralDriven.h */,
+				E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */,
+			);
+			name = BLEDriven;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +449,7 @@
 				E9D40B2C18B07CD700C89A59 /* DMSpinnerView.m in Sources */,
 				E9D40B2E18B07CD700C89A59 /* DMTabBar.m in Sources */,
 				E9D40B3018B07CD700C89A59 /* DMTabBarController.m in Sources */,
+				E9E6000C18B5E1AB002C59CB /* BLECentralDriven.m in Sources */,
 				E9D40B2D18B07CD700C89A59 /* DMStyleSheet.m in Sources */,
 				E982F612188FFE9400D0414C /* main.m in Sources */,
 				E9D40B2918B07CD700C89A59 /* DMLoadMoreFooterView.m in Sources */,
