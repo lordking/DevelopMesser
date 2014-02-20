@@ -10,6 +10,16 @@
       <Group
          location = "container:"
          name = "Core">
+         <Group
+            location = "container:"
+            name = "BLEDriven">
+            <FileRef
+               location = "group:DevelopMesser/BLECentralDriven.h">
+            </FileRef>
+            <FileRef
+               location = "group:DevelopMesser/BLECentralDriven.m">
+            </FileRef>
+         </Group>
          <FileRef
             location = "group:DevelopMesser/DMDebug.h">
          </FileRef>
