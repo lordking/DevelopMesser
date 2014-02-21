@@ -34,6 +34,12 @@
  */
 - (void)getDiscoveredCharacteristics:(NSArray *)discoveredCharacteristics withService:(CBService*)service Peripheral:(CBPeripheral *)peripheral;
 
+/*!
+ *  当外围设备发送更新值时获取更新后的服务特性，当调用readInCharacteristic:characteristicUUID service:serviceUUID peripheral: peripheralUUID，可使用该接口。
+ *
+ *  @param characteristic 更新后的服务特性
+ */
+- (void)didReadForUpdateValue:(CBCharacteristic *)characteristic;
 
 @end
 
@@ -49,7 +55,8 @@ typedef enum
 //定义操作动作
 typedef enum
 {
-    BLUETOOTH_ACTION_WRITE = 1
+    BLUETOOTH_ACTION_WRITE = 1,
+    BLUETOOTH_ACTION_READ = 2
 }BLUETOOTH_ACTION_TYPE;
 
 //定义一个连接外围设备的回调程序块
@@ -78,6 +85,7 @@ typedef void (^eventActionBlock)(CBPeripheral *peripheral, CBCharacteristic *cha
 - (void)disconnectPeripheralWithUUID:(NSUUID*)uuid;
 - (void)connectResponse:(eventConnectBlock)block;
 - (void)writeData:(NSData*)data forCharacteristic:(CBUUID*)characteristicUUID service: (CBUUID*)serviceUUID peripheral: (NSUUID*)peripheralUUID;
+- (void)readInCharacteristic:(CBUUID*)characteristicUUID service: (CBUUID*)serviceUUID peripheral: (NSUUID*)peripheralUUID;
 - (void)actionResponse:(eventActionBlock)block;
 
 @property (nonatomic, weak) id<BLECentralDrivenDelegate> delegate;

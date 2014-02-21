@@ -215,6 +215,25 @@ static eventActionBlock privateActionBlock;
     
 }
 
+/*!
+ *  写入数据到外围设备。使用此方法前，无需再次调用(void)connectPeripheralWithUUID:uuid连接蓝牙设备。
+ *  可以调用(void)connectResponse:block，回调取得连接状态。
+ *
+ *  @param data               写入的数据
+ *  @param characteristicUUID 服务特性
+ */
+- (void)readInCharacteristic:(CBUUID*)characteristicUUID service: (CBUUID*)serviceUUID peripheral: (NSUUID*)peripheralUUID
+{
+    DMPRINTMETHODNAME();
+    
+    _serviceUUID = serviceUUID;
+    _characteristicUUID = characteristicUUID;
+    _actionType = BLUETOOTH_ACTION_READ;
+    
+    [self connectPeripheralWithUUID:peripheralUUID];
+    
+}
+
 
 #pragma mark - private method
 
@@ -390,7 +409,7 @@ static eventActionBlock privateActionBlock;
 }
 
 /*!
- *  当一个服务下的服务特性被发现时，激活此调用
+ *  当外围设备的服务特性被发现时，激活此调用
  *
  *  @param peripheral 外围设备
  *  @param service    服务
@@ -425,6 +444,8 @@ static eventActionBlock privateActionBlock;
     DMPRINT(@"找到外围设备的服务特性:%@", _characteristicUUID);
     if (_actionType == BLUETOOTH_ACTION_WRITE) {
         [peripheral writeValue:_data forCharacteristic:currentCharacteristic type:CBCharacteristicWriteWithResponse];
+    } else if (_actionType == BLUETOOTH_ACTION_READ) {
+        [peripheral setNotifyValue:YES forCharacteristic:currentCharacteristic];
     }
 }
 
@@ -448,7 +469,61 @@ static eventActionBlock privateActionBlock;
         DMPRINT(@"写入服务特性 %@ 错误: %@", characteristic.UUID, [error localizedDescription]);
         return;
     }
+
     DMPRINT(@"写入服务特性:%@ 成功", _characteristicUUID);
 }
+
+/*!
+ *  当外围设备接受新值时，计划此方法
+ *
+ *  @param peripheral     <#peripheral description#>
+ *  @param characteristic <#characteristic description#>
+ *  @param error          <#error description#>
+ */
+-(void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
+{
+    DMPRINTMETHODNAME();
+    
+    if (error) {
+        NSLog(@"Error changing notification state: %@", error.localizedDescription);
+    }
+    
+    // Exits if it's not the transfer characteristic
+    if (![characteristic.UUID isEqual:_characteristicUUID]) {
+        return;
+    }
+    
+    // Notification has started
+    if (characteristic.isNotifying) {
+        NSLog(@"Notification began on %@", characteristic);
+        [peripheral readValueForCharacteristic:characteristic];
+    } else { // Notification has stopped
+        // so disconnect from the peripheral
+        NSLog(@"Notification stopped on %@.  Disconnecting", characteristic);
+        [self.manager cancelPeripheralConnection:peripheral];
+    }
+    
+    
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
+{
+    DMPRINTMETHODNAME();
+    
+    if (error) {
+        NSLog(@"Error changing notification state: %@", error.localizedDescription);
+    }
+    
+    // Exits if it's not the transfer characteristic
+    if (![characteristic.UUID isEqual:_characteristicUUID]) {
+        return;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(didReadForUpdateValue:)])
+        [self.delegate didReadForUpdateValue:characteristic];
+
+}
+
+
 
 @end
