@@ -4,9 +4,16 @@
    <Group
       location = "group:DevelopMesser"
       name = "DevelopMesser">
-      <FileRef
-         location = "group:DevelopMesser.h">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "Extension">
+         <FileRef
+            location = "group:DevelopMesser/UIImage+Extensions.m">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/UIImage+Extensions.h">
+         </FileRef>
+      </Group>
       <Group
          location = "container:"
          name = "Core">

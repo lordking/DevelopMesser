@@ -508,7 +508,7 @@ static eventActionBlock privateActionBlock;
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
-    DMPRINTMETHODNAME();
+//    DMPRINTMETHODNAME();
     
     if (error) {
         NSLog(@"Error changing notification state: %@", error.localizedDescription);
