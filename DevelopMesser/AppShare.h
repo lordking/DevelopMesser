@@ -8,53 +8,34 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-typedef NS_ENUM(NSInteger, AppType) {
-    APP_TYPE_WEIXIN,    //微信
-    APP_TYPE_QQ,        //QQ
-    APP_TYPE_SINAWEIBO      //新浪微博
-};
-
-typedef NS_ENUM(NSInteger, AppScene) {
-    WXSceneSession  = 0,        /**< 聊天界面    */
-    WXSceneTimeline = 1,        /**< 朋友圈      */
-    WXSceneFavorite = 2,        /**< 收藏       */
-};
+#import "ShareScene.h"
 
 @interface AppShare : NSObject
 
 /*!
  *  采用单例模式实例化对象
  *
- *  @return <#return value description#>
+ *  @return 实例化的单例对象
  */
 + (AppShare*)shared;
 
 /*!
- *  注册AppID
+ *  注册分享场景。
  *
- *  @param appId <#appId description#>
- *  @param type  <#type description#>
- *  @param scene <#scene description#>
+ *  @param scene 开放平台定义的应用场景
+ *  @param appId 应用ID，一般为在开放平台上注册的AppID
+ * @param type  开放平台的类型
  */
-- (void)registerAppId:(NSString*)appId withAppType:(AppType)type AppScene:(AppScene)scene;
+- (void)registerScene:(AppScene)scene withAppID:(NSString*)appId type:(AppType)type;
 
 /*!
- *  获取当前可使用的分享模块。根据注册的AppID来定。
+ *  获取当前可使用的分享模块)。获取之前，需要注册AppID和分享场景。
  *
- *  @return <#return value description#>
+ *  @return (ShareScene的Array数组
  */
-- (NSArray*)getShareScene;
+- (NSArray*)getShareScenes;
 
 @end
 
-/*!
- *  分享模块的模型组成
- */
-@interface shareModule : NSObject
 
-@property (nonatomic) AppType type;
-@property (nonatomic) AppScene scene;
-@property (nonatomic, strong) UIImage *image;
 
-@end

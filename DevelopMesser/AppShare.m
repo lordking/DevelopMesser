@@ -9,7 +9,32 @@
 #import "AppShare.h"
 #import "DMDebug.h"
 
+
+
+@interface AppShare ()
+{
+    NSMutableArray *_shareScenes;
+}
+
+
+@end
+
+
 @implementation AppShare
+
+- (void)registerScene:(AppScene)scene withAppID:(NSString *)appId type:(AppType)type
+{
+    ShareScene *shareScene = [[ShareScene alloc] init];
+    shareScene.scene = scene;
+    shareScene.appId = appId;
+    shareScene.appType = type;
+    [_shareScenes addObject:shareScene];
+}
+
+- (NSArray*)getShareScenes
+{
+    return _shareScenes;
+}
 
 + (AppShare*)shared
 {
