@@ -28,6 +28,12 @@
             </FileRef>
          </Group>
          <FileRef
+            location = "group:DevelopMesser/AppShare.h">
+         </FileRef>
+         <FileRef
+            location = "group:DevelopMesser/AppShare.m">
+         </FileRef>
+         <FileRef
             location = "group:DevelopMesser/DMDebug.h">
          </FileRef>
          <FileRef
