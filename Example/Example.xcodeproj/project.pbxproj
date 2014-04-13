@@ -45,6 +45,9 @@
 		E9D40B3918B09A0E00C89A59 /* DebugDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3818B09A0E00C89A59 /* DebugDemoViewController.m */; };
 		E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */; };
 		E9E6000C18B5E1AB002C59CB /* BLECentralDriven.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */; };
+		E9F0077D18FA2B97005D6EBC /* ShareContent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077818FA2B97005D6EBC /* ShareContent.m */; };
+		E9F0077E18FA2B97005D6EBC /* ShareScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077B18FA2B97005D6EBC /* ShareScene.m */; };
+		E9F0077F18FA2B97005D6EBC /* AppShare.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077C18FA2B97005D6EBC /* AppShare.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,12 @@
 		E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarControlDemoViewController.m; path = Example/TabBarControlDemoViewController.m; sourceTree = "<group>"; };
 		E9E6000A18B5E1AB002C59CB /* BLECentralDriven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLECentralDriven.h; path = ../../DevelopMesser/BLECentralDriven.h; sourceTree = "<group>"; };
 		E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLECentralDriven.m; path = ../../DevelopMesser/BLECentralDriven.m; sourceTree = "<group>"; };
+		E9F0077718FA2B97005D6EBC /* ShareContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareContent.h; path = ../../DevelopMesser/ShareContent.h; sourceTree = "<group>"; };
+		E9F0077818FA2B97005D6EBC /* ShareContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareContent.m; path = ../../DevelopMesser/ShareContent.m; sourceTree = "<group>"; };
+		E9F0077918FA2B97005D6EBC /* AppShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppShare.h; path = ../../DevelopMesser/AppShare.h; sourceTree = "<group>"; };
+		E9F0077A18FA2B97005D6EBC /* ShareScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareScene.h; path = ../../DevelopMesser/ShareScene.h; sourceTree = "<group>"; };
+		E9F0077B18FA2B97005D6EBC /* ShareScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareScene.m; path = ../../DevelopMesser/ShareScene.m; sourceTree = "<group>"; };
+		E9F0077C18FA2B97005D6EBC /* AppShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppShare.m; path = ../../DevelopMesser/AppShare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +325,7 @@
 		E9D40B4218B1B0C000C89A59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E9F0078018FA2B9C005D6EBC /* AppShare */,
 				E9E6000D18B5E1BB002C59CB /* BLEDriven */,
 				E9D40B3A18B1A0B300C89A59 /* Debug */,
 			);
@@ -337,6 +347,19 @@
 				E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */,
 			);
 			name = BLEDriven;
+			sourceTree = "<group>";
+		};
+		E9F0078018FA2B9C005D6EBC /* AppShare */ = {
+			isa = PBXGroup;
+			children = (
+				E9F0077718FA2B97005D6EBC /* ShareContent.h */,
+				E9F0077818FA2B97005D6EBC /* ShareContent.m */,
+				E9F0077918FA2B97005D6EBC /* AppShare.h */,
+				E9F0077C18FA2B97005D6EBC /* AppShare.m */,
+				E9F0077A18FA2B97005D6EBC /* ShareScene.h */,
+				E9F0077B18FA2B97005D6EBC /* ShareScene.m */,
+			);
+			name = AppShare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,8 +465,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E982F61C188FFE9400D0414C /* ViewController.m in Sources */,
+				E9F0077F18FA2B97005D6EBC /* AppShare.m in Sources */,
 				E9D40B2B18B07CD700C89A59 /* DMRefreshHeaderView.m in Sources */,
 				E9D40B3318B07CD700C89A59 /* DMUserinfo.m in Sources */,
+				E9F0077E18FA2B97005D6EBC /* ShareScene.m in Sources */,
 				E9D40B3218B07CD700C89A59 /* DMTextField.m in Sources */,
 				E9D40B2A18B07CD700C89A59 /* DMPullRefreshTableView.m in Sources */,
 				E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */,
@@ -452,6 +477,7 @@
 				E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */,
 				E982F616188FFE9400D0414C /* AppDelegate.m in Sources */,
 				E9D40B2C18B07CD700C89A59 /* DMSpinnerView.m in Sources */,
+				E9F0077D18FA2B97005D6EBC /* ShareContent.m in Sources */,
 				E9D40B2E18B07CD700C89A59 /* DMTabBar.m in Sources */,
 				E9D40B3018B07CD700C89A59 /* DMTabBarController.m in Sources */,
 				E9E6000C18B5E1AB002C59CB /* BLECentralDriven.m in Sources */,

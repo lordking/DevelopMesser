@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ShareScene.h"
+#import "ShareContent.h"
 
 @interface AppShare : NSObject
 
@@ -26,7 +27,8 @@
  *  @param appId 应用ID，一般为在开放平台上注册的AppID
  * @param type  开放平台的类型
  */
-- (void)registerScene:(AppScene)scene withAppID:(NSString*)appId type:(AppType)type;
+- (void)registerShareScene:(ShareScene*)scene;
+
 
 /*!
  *  获取当前可使用的分享模块)。获取之前，需要注册AppID和分享场景。
@@ -34,6 +36,24 @@
  *  @return (ShareScene的Array数组
  */
 - (NSArray*)getShareScenes;
+
+
+/*!
+ *  分享内容到单个场景。
+ *
+ *  @param shareContent <#shareContent description#>
+ *  @param appId        <#appId description#>
+ *  @param scene        <#scene description#>
+ */
+- (void)share:(ShareContent*)shareContent withScene:(ShareScene*)scene;
+
+/*!
+ *  一键分享内容到多个场景。微信不能一键分享。
+ *
+ *  @param shareContent <#shareContent description#>
+ *  @param scenes       <#scenes description#>
+ */
+- (void)share:(ShareContent*)shareContent withScenes:(NSArray*)scenes;
 
 @end
 
