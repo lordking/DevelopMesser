@@ -9,7 +9,9 @@
 #import "AppShare.h"
 #import "DMDebug.h"
 
-
+NSString * const SceneWXSession = @"wxSession";; //微信好友
+NSString * const SceneWXTimeline = @"wxTimeline";; //微信朋友圈
+NSString * const SceneWXFavorite = @"wxFavorite";;  //微信收藏
 
 @interface AppShare ()
 {
@@ -17,9 +19,7 @@
     NSArray *_scenes;
 }
 
-
 @end
-
 
 @implementation AppShare
 
@@ -31,14 +31,16 @@
     [_shareApp addObject:shareScene];
 }
 
-- (void)supportScenes:(NSArray *)scenes
+- (void)setSupportScenes:(NSArray *)scenes
 {
     _scenes = scenes;
 }
 
 - (void)share:(ShareContent *)shareContent withScene:(NSString*)scene
 {
-    if ([scene isEqualToString:SceneWXSession] ) {
+    DMPRINTMETHODNAME();
+    
+    if ([scene isEqualToString: SceneWXSession] ) {
         DMPRINT(@"分享到微信好友");
     } else if ([scene isEqualToString:SceneWXTimeline]) {
         DMPRINT(@"分享到微信朋友圈");

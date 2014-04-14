@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "ShareContent.h"
 
 
@@ -18,9 +17,10 @@ typedef NS_ENUM(NSInteger, AppType) {
 };
 
 //分享平台的应用场景
-extern NSString *const SceneWXSession; //微信好友
-extern NSString *const SceneWXTimeline; //微信朋友圈
-extern NSString *const SceneWXFavorite;  //微信收藏
+
+FOUNDATION_EXPORT NSString * const SceneWXSession; //微信好友
+FOUNDATION_EXPORT NSString * const SceneWXTimeline; //微信朋友圈
+FOUNDATION_EXPORT NSString * const SceneWXFavorite;  //微信收藏
 
 @interface AppShare : NSObject
 
@@ -45,7 +45,7 @@ extern NSString *const SceneWXFavorite;  //微信收藏
  *
  *  @param scenes 需要应用场景组成的数组。
  */
-- (void)supportScenes:(NSArray*)scenes;
+- (void)setSupportScenes:(NSArray*)scenes;
 
 
 /*!
