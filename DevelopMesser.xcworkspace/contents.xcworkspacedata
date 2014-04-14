@@ -31,12 +31,6 @@
             location = "container:"
             name = "AppShare">
             <FileRef
-               location = "group:DevelopMesser/ShareScene.h">
-            </FileRef>
-            <FileRef
-               location = "group:DevelopMesser/ShareScene.m">
-            </FileRef>
-            <FileRef
                location = "group:DevelopMesser/AppShare.h">
             </FileRef>
             <FileRef

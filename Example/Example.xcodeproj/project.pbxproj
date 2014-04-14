@@ -46,7 +46,6 @@
 		E9D40B4018B1A8EE00C89A59 /* TabBarControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D40B3F18B1A8EE00C89A59 /* TabBarControlDemoViewController.m */; };
 		E9E6000C18B5E1AB002C59CB /* BLECentralDriven.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6000B18B5E1AB002C59CB /* BLECentralDriven.m */; };
 		E9F0077D18FA2B97005D6EBC /* ShareContent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077818FA2B97005D6EBC /* ShareContent.m */; };
-		E9F0077E18FA2B97005D6EBC /* ShareScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077B18FA2B97005D6EBC /* ShareScene.m */; };
 		E9F0077F18FA2B97005D6EBC /* AppShare.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0077C18FA2B97005D6EBC /* AppShare.m */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +124,6 @@
 		E9F0077718FA2B97005D6EBC /* ShareContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareContent.h; path = ../../DevelopMesser/ShareContent.h; sourceTree = "<group>"; };
 		E9F0077818FA2B97005D6EBC /* ShareContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareContent.m; path = ../../DevelopMesser/ShareContent.m; sourceTree = "<group>"; };
 		E9F0077918FA2B97005D6EBC /* AppShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppShare.h; path = ../../DevelopMesser/AppShare.h; sourceTree = "<group>"; };
-		E9F0077A18FA2B97005D6EBC /* ShareScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareScene.h; path = ../../DevelopMesser/ShareScene.h; sourceTree = "<group>"; };
-		E9F0077B18FA2B97005D6EBC /* ShareScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareScene.m; path = ../../DevelopMesser/ShareScene.m; sourceTree = "<group>"; };
 		E9F0077C18FA2B97005D6EBC /* AppShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppShare.m; path = ../../DevelopMesser/AppShare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -356,8 +353,6 @@
 				E9F0077818FA2B97005D6EBC /* ShareContent.m */,
 				E9F0077918FA2B97005D6EBC /* AppShare.h */,
 				E9F0077C18FA2B97005D6EBC /* AppShare.m */,
-				E9F0077A18FA2B97005D6EBC /* ShareScene.h */,
-				E9F0077B18FA2B97005D6EBC /* ShareScene.m */,
 			);
 			name = AppShare;
 			sourceTree = "<group>";
@@ -468,7 +463,6 @@
 				E9F0077F18FA2B97005D6EBC /* AppShare.m in Sources */,
 				E9D40B2B18B07CD700C89A59 /* DMRefreshHeaderView.m in Sources */,
 				E9D40B3318B07CD700C89A59 /* DMUserinfo.m in Sources */,
-				E9F0077E18FA2B97005D6EBC /* ShareScene.m in Sources */,
 				E9D40B3218B07CD700C89A59 /* DMTextField.m in Sources */,
 				E9D40B2A18B07CD700C89A59 /* DMPullRefreshTableView.m in Sources */,
 				E9D40B3118B07CD700C89A59 /* DMTabBarItem.m in Sources */,

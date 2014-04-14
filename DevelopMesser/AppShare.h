@@ -8,8 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "ShareScene.h"
 #import "ShareContent.h"
+
+
+typedef NS_ENUM(NSInteger, AppType) {
+    AppTypeWX,          //微信
+    AppTypeQQ,          //QQ
+    AppTypeSinaWeibo    //新浪微博
+};
+
+//分享平台的应用场景
+extern NSString *const SceneWXSession; //微信好友
+extern NSString *const SceneWXTimeline; //微信朋友圈
+extern NSString *const SceneWXFavorite;  //微信收藏
 
 @interface AppShare : NSObject
 
@@ -20,32 +31,31 @@
  */
 + (AppShare*)shared;
 
-/*!
- *  注册分享场景。
- *
- *  @param scene 开放平台定义的应用场景
- *  @param appId 应用ID，一般为在开放平台上注册的AppID
- * @param type  开放平台的类型
- */
-- (void)registerShareScene:(ShareScene*)scene;
 
-
-/*!
- *  获取当前可使用的分享模块)。获取之前，需要注册AppID和分享场景。
+/**
+ *  注册开放平台的AppID
  *
- *  @return (ShareScene的Array数组
+ *  @param appId
+ *  @param appType <#appType description#>
  */
-- (NSArray*)getShareScenes;
+- (void)registerAppId:(NSString*)appId withAppType: (AppType)appType;
+
+/**
+ *  注册需要支持的应用场景。应用场景由AppScene定义。
+ *
+ *  @param scenes 需要应用场景组成的数组。
+ */
+- (void)supportScenes:(NSArray*)scenes;
 
 
 /*!
  *  分享内容到单个场景。
  *
- *  @param shareContent <#shareContent description#>
+ *  @param shareContent
  *  @param appId        <#appId description#>
  *  @param scene        <#scene description#>
  */
-- (void)share:(ShareContent*)shareContent withScene:(ShareScene*)scene;
+- (void)share:(ShareContent*)shareContent withScene:(NSString*)scene;
 
 /*!
  *  一键分享内容到多个场景。微信不能一键分享。

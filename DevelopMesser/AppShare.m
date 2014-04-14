@@ -13,7 +13,8 @@
 
 @interface AppShare ()
 {
-    NSMutableArray *_shareScenes;
+    NSMutableArray *_shareApp;
+    NSArray *_scenes;
 }
 
 
@@ -22,18 +23,33 @@
 
 @implementation AppShare
 
-- (void)registerScene:(AppScene)scene withAppID:(NSString *)appId type:(AppType)type
+- (void)registerAppId:(NSString *)appId withAppType:(AppType)appType
 {
-    ShareScene *shareScene = [[ShareScene alloc] init];
-    shareScene.scene = scene;
-    shareScene.appId = appId;
-    shareScene.appType = type;
-    [_shareScenes addObject:shareScene];
+    NSDictionary *shareScene = @{@"appId": appId,
+                              @"appType": [NSNumber numberWithInt:appType]};
+    
+    [_shareApp addObject:shareScene];
 }
 
-- (NSArray*)getShareScenes
+- (void)supportScenes:(NSArray *)scenes
 {
-    return _shareScenes;
+    _scenes = scenes;
+}
+
+- (void)share:(ShareContent *)shareContent withScene:(NSString*)scene
+{
+    if ([scene isEqualToString:SceneWXSession] ) {
+        DMPRINT(@"分享到微信好友");
+    } else if ([scene isEqualToString:SceneWXTimeline]) {
+        DMPRINT(@"分享到微信朋友圈");
+    } else if ([scene isEqualToString:SceneWXFavorite]) {
+        DMPRINT(@"分享到微信收藏");
+    }
+}
+
+- (void)share:(ShareContent *)shareContent withScenes:(NSArray *)scenes
+{
+    
 }
 
 + (AppShare*)shared
