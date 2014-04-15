@@ -27,22 +27,6 @@
                location = "group:DevelopMesser/BLECentralDriven.m">
             </FileRef>
          </Group>
-         <Group
-            location = "container:"
-            name = "AppShare">
-            <FileRef
-               location = "group:DevelopMesser/AppShare.h">
-            </FileRef>
-            <FileRef
-               location = "group:DevelopMesser/AppShare.m">
-            </FileRef>
-            <FileRef
-               location = "group:DevelopMesser/ShareContent.h">
-            </FileRef>
-            <FileRef
-               location = "group:DevelopMesser/ShareContent.m">
-            </FileRef>
-         </Group>
          <FileRef
             location = "group:DevelopMesser/DMDebug.h">
          </FileRef>
